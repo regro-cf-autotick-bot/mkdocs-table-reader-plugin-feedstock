@@ -1,11 +1,11 @@
-About mkdocs-table-reader-plugin
-================================
+About mkdocs-table-reader-plugin-feedstock
+==========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mkdocs-table-reader-plugin-feedstock/blob/main/LICENSE.txt)
 
 Home: https://timvink.github.io/mkdocs-table-reader-plugin/#documentation
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mkdocs-table-reader-plugin-feedstock/blob/main/LICENSE.txt)
 
 Summary: MkDocs plugin to directly insert tables from files into markdown.
 
