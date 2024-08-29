@@ -1,5 +1,5 @@
 {% set name = "mkdocs-table-reader-plugin" %}
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 1580327ba39ee2b4d3763704215666eb909b86116596a8dbffd5715afdfa1e20
+  sha256: eb15688ee8c0cd1a842f506f18973b87be22bd7baa5e2e551089de6b7f9ec25b
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
