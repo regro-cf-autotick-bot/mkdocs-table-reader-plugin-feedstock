@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: eb15688ee8c0cd1a842f506f18973b87be22bd7baa5e2e551089de6b7f9ec25b
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - mkdocs >=1.0
     - pandas >=1.1
     - tabulate >=0.8.7
@@ -30,6 +30,7 @@ test:
     - mkdocs_table_reader_plugin
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
