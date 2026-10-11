@@ -1,13 +1,13 @@
 {% set name = "mkdocs-table-reader-plugin" %}
-{% set version = "3.1.0" %}
+{% set version = "4.0.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: eb15688ee8c0cd1a842f506f18973b87be22bd7baa5e2e551089de6b7f9ec25b
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: a4cf2491c759ab1c11564254403100265ab65cd3d33a2ea4f2828bacfa18fddc
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -21,9 +21,10 @@ requirements:
   run:
     - python >=3.6
     - mkdocs >=1.0
-    - pandas >=1.1
+    - pandas >=2.1
     - tabulate >=0.8.7
     - PyYAML >=5.4.1
+    # - pyyaml >=5.4.1
 
 test:
   imports:
